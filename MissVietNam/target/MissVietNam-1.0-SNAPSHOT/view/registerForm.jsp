@@ -75,7 +75,7 @@
                 </tr>
                 <tr>
                     <td>Email</td>
-                    <td><input type="text" name="email" id="email"></td>
+                    <td><input type="email" name="email" id="email"></td>
                 </tr>
                 <tr>
                     <td>Ethnic</td>
@@ -95,22 +95,23 @@
                 </tr>
                 <tr>
                     <td>Height</td>
-                    <td><input type="text" name="height" id="height"></td>
+                    <td><input type="number" name="height" id="height"></td>
                 </tr>
                 <tr>
                     <td>Weight</td>
-                    <td><input type="text" name="weight" id="weight"></td>
+                    <td><input type="number" name="weight" id="weight"></td>
                 </tr>
                 <tr>
                     <td>Talent</td>
                     <td><input type="text" name="talent" id="talent"></td>
                 </tr>
                 <tr>
-                    <td>Province</td>
-                    <td><input type="text" name="province" id="province"></td>
-                </tr>
                     <td>Image</td>
                     <td><input type="text" name="image" id="image"></td>
+                </tr>
+                <tr>
+                    <td>Province Code</td>
+                    <td><input type="text" name="code" id="code"></td>
                 </tr>
                 <tr>
                     <td></td>

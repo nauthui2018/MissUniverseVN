@@ -26,10 +26,9 @@ public class QualifyServlet extends HttpServlet {
             dispatcher = request.getRequestDispatcher("error-404.jsp");
         } else {
             candidate.setQualify(qualify);
-            request.setAttribute("candidate", candidate);
+            request.setAttribute("candidates", service.findAll());
             request.setAttribute("message", "Candidate's " + candidate.getName() + " was qualified");
-            dispatcher = request.getRequestDispatcher("view/qualifyForm.jsp");
-            response.sendRedirect("view/listCandidates.jsp");
+            dispatcher = request.getRequestDispatcher("view/listCandidates.jsp");
         }
         try {
             dispatcher.forward(request, response);

@@ -25,9 +25,10 @@ public class DeleteServlet extends HttpServlet {
             dispatcher = request.getRequestDispatcher("error-404.jsp");
         } else {
             this.service.delete(candidate);
-            request.setAttribute("message", "Candidate's" + candidate.getName() + "was deleted");
+            request.setAttribute("message", "Candidate " + candidate.getName() + " was deleted");
+            request.setAttribute("candidates", service.findAll());
             try {
-                response.sendRedirect("/view/listCandidates.jsp");
+                response.sendRedirect("view/listCandidates.jsp");
             } catch (IOException e) {
                 e.printStackTrace();
             }

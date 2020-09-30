@@ -37,6 +37,9 @@
     <p>
         <a href="/listCandidates">Show all candidates</a>
     </p>
+    <p>
+        <a href="/listQualifiers">Show all qualifiers</a>
+    </p>
     <form method="post">
         <fieldset>
             <table>

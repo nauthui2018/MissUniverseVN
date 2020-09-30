@@ -26,6 +26,12 @@
             <span class="message">${requestScope["message"]}</span>
         </c:if>
     </p>
+    <p>
+        <a href="/register">Back to register form</a>
+    </p>
+    <p>
+        <a href="/listQualifiers">Show all qualifiers</a>
+    </p>
     <table>
         <tr>
             <td>No.</td>

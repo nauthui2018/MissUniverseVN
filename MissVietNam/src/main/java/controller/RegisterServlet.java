@@ -20,14 +20,14 @@ public class RegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("name");
         String dob = request.getParameter("dob");
+        String personalCode  = request.getParameter("personalCode");
         String address1 = request.getParameter("address1");
         String address2 = request.getParameter("address2");
         String mobile = request.getParameter("mobile");
         String email = request.getParameter("email");
-        String personalCode  = request.getParameter("personalCode");
-        String job = request.getParameter("job");
-        String education = request.getParameter("education");
         String ethnic = request.getParameter("ethnic");
+        String education = request.getParameter("education");
+        String job = request.getParameter("job");
         String address3 = request.getParameter("address3");
         double height = Double.parseDouble(request.getParameter("height"));
         double weight = Double.parseDouble(request.getParameter("weight"));
@@ -35,11 +35,13 @@ public class RegisterServlet extends HttpServlet {
         String image = request.getParameter("image");
         int code = Integer.parseInt(request.getParameter("code"));
         Candidate candidate = new Candidate(name, dob, address1, address2, mobile, email, personalCode, job, education, ethnic, address3, height, weight, talent, image, code);
-        this.service.create(candidate);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("view/registerForm.jsp");
+        service.create(candidate);
         request.setAttribute("message", "New candidate had been registered");
+        request.setAttribute("candidates", service.findAll());
+        RequestDispatcher dispatcher = request.getRequestDispatcher("view/listCandidates.jsp");
         try {
             dispatcher.forward(request, response);
+
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ServletException e) {

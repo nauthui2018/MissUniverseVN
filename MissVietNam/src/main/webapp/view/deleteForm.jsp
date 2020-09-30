@@ -21,13 +21,8 @@
         }
 
         td{
-            width: 300px;
-            text-align: right;
-        }
-
-        input{
-            width: 300px;
-            margin-left: 20px;
+            width: 100px;
+            text-align: left;
         }
 
     </style>
@@ -64,10 +59,6 @@
                 <tr>
                     <td>Talent</td>
                     <td>${requestScope["candidate"].getTalent()}</td>
-                </tr>
-                <tr>
-                    <td>Province</td>
-                    <td>${requestScope["candidate"].getCode()}</td>
                 </tr>
                 <tr>
                     <td>Image</td>
